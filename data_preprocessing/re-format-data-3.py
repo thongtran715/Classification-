@@ -1,6 +1,6 @@
 #this file is to re-format the data
 read_file = open("data.txt", 'r')
-write_file = open("complete_data_2.txt", 'a')
+write_file = open("complete_data_3.txt", 'a')
 
 for lines in read_file:
 	lines = lines.strip() # Chop the end line
@@ -16,11 +16,7 @@ for lines in read_file:
 		value = str(lines[i])
 		combine = index + ":" + value
 		string = string + combine + " "
-	if lines[0] == '0':
-		append_string = "+1" + " "
-		append_string += string
-	else:
-		append_string = "-1" + " "
+		append_string = lines[0] + " "
 		append_string += string
 	append_string+="\n"
 	write_file.write(append_string)

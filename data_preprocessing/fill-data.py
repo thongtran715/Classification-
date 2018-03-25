@@ -82,7 +82,7 @@ try:
 		for data in line:
 			if data == "?":
 				number = fill_average("data.txt", counter)
-				print(number)
+				print (number)
 				lst.append(number)
 				break
 			counter += 1
@@ -98,5 +98,3 @@ for line in fileinput.input("data.txt", inplace=1):
 			index += 1
 		sys.stdout.write(line)
 """
-
-
